@@ -8,8 +8,7 @@ const userSchema = new mongoose.Schema({
     },
     phoneNumber: {
         type: String,
-        required: [true, "Please enter your phone number"],
-        unique: true
+        required: [true, "Please enter your phone number"]
     },
     dob: {
         type: Date,
