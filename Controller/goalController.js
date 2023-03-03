@@ -35,7 +35,7 @@ const getAllActiveGoals = asyncHandler(async(req, res) => {
 })
 
 const createGoal = asyncHandler(async(req, res) => {
-    const { title, description, targetAmount } = req.body;
+    const { title, description, targetAmount,durationInMonths } = req.body;
     const user = req.user;
 
     if (user) {
@@ -43,6 +43,7 @@ const createGoal = asyncHandler(async(req, res) => {
             title: title,
             description: description,
             targetAmount: targetAmount,
+            durationInMonths: durationInMonths,
             isActive: true,
             user: user._id,
             savedAmount: 0

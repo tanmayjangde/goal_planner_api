@@ -15,6 +15,10 @@ const goalSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please enter the goal description"],
     },
+    durationInMonths:{
+        type:Number,
+        required: true
+    },
     targetAmount: {
         type: Number,
     },
